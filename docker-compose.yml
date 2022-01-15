@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  customerdb:
+    image: postgres
+
+  registerserviceswithreflection:
+    image: ${DOCKER_REGISTRY-}registerserviceswithreflection
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+volumes:
+  postgres_data:
+
+

@@ -28,4 +28,12 @@ public class CustomerController : ControllerBase
         Customer customer = await _customerService.GetCustomer(id);
         return customer;
     }
+    
+    [HttpPost("CreateCustomer")]
+    [ProducesResponseType(typeof(Customer), (int)HttpStatusCode.OK)]
+    public async Task<ActionResult<Customer>> CreateCustomer([FromBody] Customer customer)
+    {
+        await _customerService.CreateCustomer(customer);
+        return customer;
+    } 
 }

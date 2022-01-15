@@ -3,6 +3,7 @@
 // </copyright>
 // <author>Tom Fletcher, Software Engineer</author>
 
+using Microsoft.EntityFrameworkCore;
 using RegisterServicesWithReflection.Data;
 using RegisterServicesWithReflection.Models;
 using RegisterServicesWithReflection.Services.Interfaces;
@@ -17,10 +18,18 @@ public class CustomerService : ICustomerService
     {
         _dataContext = dataContext;
     }
+
     public async Task<Customer> GetCustomer(Guid id)
     {
-        Customer? customer = _dataContext.Customers.FirstOrDefault(x => x.Id == id);
-
+        Customer customer = await _dataContext.Customers.FirstOrDefaultAsync(x => x.Id == id);
         return customer ?? new Customer();
+    }
+
+    public async Task<Customer> CreateCustomer(Customer customer)
+    {
+        _dataContext.Customers.Add(customer);
+        bool result = await _dataContext.SaveChangesAsync() > 0;
+
+        return result ? customer : new Customer();
     }
 }

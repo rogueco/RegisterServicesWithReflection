@@ -10,4 +10,6 @@ namespace RegisterServicesWithReflection.Services.Interfaces;
 public interface ICustomerService
 {
     Task<Customer> GetCustomer(Guid id);
+    
+    Task<Customer> CreateCustomer(Customer customer);
 }
