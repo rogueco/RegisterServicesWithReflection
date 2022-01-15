@@ -1,4 +1,4 @@
-// <copyright file="IOrderService.cs" company="Commerce Control Limited">
+// <copyright file="IOrderService.cs">
 // Copyright (c) 2022 All Rights Reserved
 // </copyright>
 // <author>Tom Fletcher, Software Engineer</author>
