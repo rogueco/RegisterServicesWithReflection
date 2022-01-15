@@ -4,10 +4,11 @@
 // <author>Tom Fletcher, Software Engineer</author>
 
 using RegisterServicesWithReflection.Models;
+using RegisterServicesWithReflection.Services.Base;
 
 namespace RegisterServicesWithReflection.Services.Interfaces;
 
-public interface ICustomerService
+public interface ICustomerService : IScopedService
 {
     Task<Customer> GetCustomer(Guid id);
 }
