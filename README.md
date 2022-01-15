@@ -10,6 +10,11 @@ If you want to test the functionality of the API you can run the following comma
 docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
 ```
 
+After you run this command, in the root of your solution directory run the following command to update the database:
+```
+dotnet ef database update
+```
+
 API: http://localhost:8002/swagger/index.html
 
 Otherwise, you can just build the solution
