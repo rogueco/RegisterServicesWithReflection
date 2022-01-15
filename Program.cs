@@ -13,9 +13,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Add DbContext
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+var connectionString = builder.Configuration.GetConnectionString("ConnectionString");
 builder.Services.AddDbContext<DataContext>(options => options.UseNpgsql(connectionString));
-
 
 // Add Services
 builder.Services.AddScoped<ICustomerService, CustomerService>();

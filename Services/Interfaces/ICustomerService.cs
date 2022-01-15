@@ -11,4 +11,6 @@ namespace RegisterServicesWithReflection.Services.Interfaces;
 public interface ICustomerService : IScopedService
 {
     Task<Customer> GetCustomer(Guid id);
+    
+    Task<Customer> CreateCustomer(Customer customer);
 }
