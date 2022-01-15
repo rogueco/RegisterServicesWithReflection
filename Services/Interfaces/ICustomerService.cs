@@ -4,9 +4,11 @@
 // <author>Tom Fletcher, Software Engineer</author>
 
 using RegisterServicesWithReflection.Models;
+using RegisterServicesWithReflection.Services.Base;
 
 namespace RegisterServicesWithReflection.Services.Interfaces;
 
+[ScopedRegistration]
 public interface ICustomerService
 {
     Task<Customer> GetCustomer(Guid id);

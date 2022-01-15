@@ -3,8 +3,11 @@
 // </copyright>
 // <author>Tom Fletcher, Software Engineer</author>
 
+using RegisterServicesWithReflection.Services.Base;
+
 namespace RegisterServicesWithReflection.Services.Interfaces;
 
+[ScopedRegistration]
 public interface IInventoryService
 {
     
