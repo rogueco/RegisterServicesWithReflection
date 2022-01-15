@@ -1,4 +1,4 @@
-// <copyright file="IInventoryService.cs" company="Commerce Control Limited">
+// <copyright file="IInventoryService.cs">
 // Copyright (c) 2022 All Rights Reserved
 // </copyright>
 // <author>Tom Fletcher, Software Engineer</author>

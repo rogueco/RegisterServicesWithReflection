@@ -1,4 +1,4 @@
-// <copyright file="Customer.cs" company="Commerce Control Limited">
+// <copyright file="Customer.cs">
 // Copyright (c) 2022 All Rights Reserved
 // </copyright>
 // <author>Tom Fletcher, Software Engineer</author>
