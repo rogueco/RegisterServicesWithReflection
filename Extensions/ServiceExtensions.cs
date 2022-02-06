@@ -23,7 +23,8 @@ public static class ServiceExtensions
             {
                 Service = s.GetInterface($"I{s.Name}"),
                 Implementation = s 
-            });
+            })
+            .Where(x => x.Service != null);
 
 
         foreach (var type in types)
