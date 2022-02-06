@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using RegisterServicesWithReflection.Data;
+using RegisterServicesWithReflection.Extensions;
 using RegisterServicesWithReflection.Services.Implementations;
 using RegisterServicesWithReflection.Services.Interfaces;
 
@@ -17,10 +18,7 @@ var connectionString = builder.Configuration.GetConnectionString("ConnectionStri
 builder.Services.AddDbContext<DataContext>(options => options.UseNpgsql(connectionString));
 
 // Add Services
-builder.Services.AddScoped<ICustomerService, CustomerService>();
-builder.Services.AddScoped<IInventoryService, InventoryService>();
-builder.Services.AddSingleton<IPaymentService, PaymentService>();
-builder.Services.AddTransient<IOrderService, OrderService>();
+builder.Services.RegisterServices(builder.Configuration);
 
 var app = builder.Build();
 
