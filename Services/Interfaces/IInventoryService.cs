@@ -7,7 +7,6 @@ using RegisterServicesWithReflection.Services.Base;
 
 namespace RegisterServicesWithReflection.Services.Interfaces;
 
-[ScopedRegistration]
 public interface IInventoryService
 {
     

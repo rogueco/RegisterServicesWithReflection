@@ -3,10 +3,12 @@
 // </copyright>
 // <author>Tom Fletcher, Software Engineer</author>
 
+using RegisterServicesWithReflection.Services.Base;
 using RegisterServicesWithReflection.Services.Interfaces;
 
 namespace RegisterServicesWithReflection.Services.Implementations;
 
+[SingletonRegistration]
 public class PaymentService : IPaymentService
 {
     

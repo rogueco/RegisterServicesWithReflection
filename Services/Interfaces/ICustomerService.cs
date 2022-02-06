@@ -8,7 +8,6 @@ using RegisterServicesWithReflection.Services.Base;
 
 namespace RegisterServicesWithReflection.Services.Interfaces;
 
-[ScopedRegistration]
 public interface ICustomerService
 {
     Task<Customer> GetCustomer(Guid id);

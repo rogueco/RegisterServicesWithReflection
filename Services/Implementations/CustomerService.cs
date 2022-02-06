@@ -6,10 +6,12 @@
 using Microsoft.EntityFrameworkCore;
 using RegisterServicesWithReflection.Data;
 using RegisterServicesWithReflection.Models;
+using RegisterServicesWithReflection.Services.Base;
 using RegisterServicesWithReflection.Services.Interfaces;
 
 namespace RegisterServicesWithReflection.Services.Implementations;
 
+[ScopedRegistration]
 public class CustomerService : ICustomerService
 {
     private readonly DataContext _dataContext;
